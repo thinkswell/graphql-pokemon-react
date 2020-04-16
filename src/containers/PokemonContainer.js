@@ -15,6 +15,8 @@ export default function PokemonContainer() {
           type="number"
           value={count}
           onChange={(e) => setCount(e.target.value)}
+          min={2}
+          max={50}
         />{" "}
         Pokemons.
       </label>
