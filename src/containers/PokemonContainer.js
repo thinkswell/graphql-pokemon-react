@@ -24,7 +24,7 @@ export default function PokemonContainer() {
         <Query query={GET_POKEMONS} variables={{ first: count }}>
           {({ loading, error, data }) => {
             if (loading) return "Loading...";
-            if (error) return `Error ${error}`;
+            if (error) return `${error}`;
             return (
               <React.Fragment>
                 {data.pokemons.map((pokemon) => (

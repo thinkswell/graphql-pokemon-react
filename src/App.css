@@ -28,55 +28,79 @@ input {
   height: auto;
   padding: 0.5rem;
   display: grid;
-  grid-template-columns: repeat(2, 30rem);
-  grid-auto-rows: 30rem;
-  grid-gap: 1.4rem;
+  grid-template-columns: repeat(2, 23rem);
+  grid-auto-rows: 27rem;
+  grid-gap: 2rem;
   box-sizing: border-box;
+  grid-auto-flow: dense;
 }
 @media only screen and (max-width: 500px) {
   .container {
     grid-template-columns: repeat(1, 30rem);
   }
 }
+
 .card {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: red;
-  margin: 1rem;
-  box-shadow: 5px 5px 1rem rgba(0, 0, 0, 0.6);
-}
-.card__bar {
-  background: orange;
-  display: flex;
-  justify-content: space-around;
-  font-size: 1.2rem;
-  flex: 1;
-  font-size: 1.3rem;
-  color: #fff;
   align-items: center;
+  box-shadow: 0.2rem -0.2rem 0.5rem #999;
 }
-.card__body {
-  flex: 1;
-  max-height: 20rem;
+.name {
+  font-size: 1.5rem;
+  background: rgb(207, 0, 121);
+  width: 100%;
+  color: #fff;
+  text-align: center;
+}
+.max {
+  background: rgb(236, 2, 139);
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.max-p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.imageBox {
+  width: 100%;
+  max-height: 100%;
+  overflow: hidden;
   background: #fff;
 }
-.card__img {
+.imageBox > img {
   width: 100%;
   height: 100%;
   object-fit: scale-down;
 }
-.attack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0.5rem 0.2rem;
-  padding: 0.3rem;
-  border-radius: 0.7rem;
-  border: 2px solid #fff;
-  text-align: center;
+.special {
+  width: 100%;
 }
-.attack__info {
-  word-break: keep-all;
-  color: red;
+.head {
+  text-align: center;
+  font-size: 1.2rem;
+  background: rgb(236, 2, 139);
+  color: #fff;
+}
+.attacks {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 0.2rem;
+}
+.attack {
+  border: 2px solid rgb(236, 2, 139);
+  font-size: 1.1rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.2rem;
+  color: #333;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
